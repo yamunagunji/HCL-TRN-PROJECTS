@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="CSSasnt-8">
+        <meta name="description" content="CSS">
+        <meta name="author" content="yamuna">
+        <script src="https://kit.fontawesome.com/9bf222216f.js"></script>
+        <link rel="stylesheet" href="CSS/gallery.css">
+        <title>
+            Creating Search Bar using HTML
+            CSS and Javascript
+        </title>
+        <script>
+            
+                    function search_flowers() {
+            let input = document.getElementById('searchbar').value
+            input=input.toLowerCase();
+            let x = document.getElementsByClassName('flowers');
+              
+            for (i = 0; i < x.length; i++) { 
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display="none";
+                }
+                else {
+                    x[i].style.display="list-item";                 
+                }
+            }
+        }
+        </script>
+    </head>
+    <body>
+
+        <input id="searchbar" onkeyup="search_flowers()" type="text"
+        name="search" placeholder="Search flowers..">
+
+        <ol id='list'>
+            <li class="flowers">Rose</li>
+            <li class="flowers">Lilly</li>
+            <li class="flowers">Tulip</li>
+            <li class="flowers">Orchid</li>
+            <li class="flowers">Carnation</li>
+            <li class="flowers">Freesia</li>
+            <li class="flowers">Hyasinth</li>
+            <li class="flowers">Peruvian Lilly</li>
+            <li class="flowers">Chrysanthemum</li>
+            <li class="flowers">Gladiolus</li>
+            <li class="flowers">Daffodil</li>
+        </ol>
+        
+    </body>
+    </html>
+    
