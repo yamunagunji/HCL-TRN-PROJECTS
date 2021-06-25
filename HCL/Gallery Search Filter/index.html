@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="CSSasnt-8">
+        <meta name="description" content="CSS">
+        <meta name="author" content="yamuna">
+        <script src="https://kit.fontawesome.com/9bf222216f.js"></script>
+        <script src="./index.js"></script>
+        <link rel="stylesheet" href="css/stylesheets.css">
+        <title>Gallery Search Filter</title>
+    <script>
+      /* var searchImages =  function (){
+    console.log('test', document.getElementById('searchbar').value);
+    imagesList.filter
+    }  */ 
+    var imagesList = [
+        {name: "watch1", imageUrl: './watch1.jpg', description:"watch one"},
+        {name: "watch2", imageUrl: './watch2.jpg', description:"watch two"},
+        {name: "watch3", imageUrl: './watch3.jpg', description:"watch three"},
+        {name: "watch4", imageUrl: './watch4.jpg', description:"watch four"},
+        {name: "car1", imageUrl: './car1.jpg', description:"car one"},
+        {name: "car2", imageUrl: './car2.jpg', description:"car two"},
+        {name: "car3", imageUrl: './car3.jpg', description:"car three"},
+        {name: "car4", imageUrl: './car4.jpg', description:"car four"},
+        {name: "bike1", imageUrl: './car1.jpg', description:"bike one"},
+        {name: "bike2", imageUrl: './car1.jpg', description:"bike two"},
+        {name: "bike3", imageUrl: './car1.jpg', description:"bike three"},
+        {name: "bike4", imageUrl: './car1.jpg', description:"bike four"},
+    ];
+   
+    function searchImages(){
+        
+        console.log('Images');
+        var userText = document.getElementById("searchbar").value;
+        var filteredImages = imagesList.filter(eachImage => eachImage.name.includes(userText));
+        console.log('filteredImages', filteredImages);
+        let element = document.getElementById('images');
+        
+        }
+    </script>
+    </head>
+    <body>
+        <forms>
+            <div>
+                <input id="searchbar"  name="search" type="text" placeholder="Search Images....."
+                onkeyup="searchImages()" >
+                <button type="button" onclick="searchImages()">click here!</button>
+
+            </div>
+        </forms>
+
+        <div class="images" >
+            <img src="images/bike1.jpg" class="watch" name="bike">
+            <img src="images/bike2.jpg" class="watch" name="bike">
+            <img src="images/bike3.jpg" class="watch" name="bike">
+            <img src="images/bike4.jpg" class="watch" name="bike">
+            <img src="images/car1.jpg"  class = "car" name="car">
+            <img src="images/car2.jpg" class="watch" name="bike">
+            <img src="images/car3.jpg" class="watch" name="bike">
+            <img src="images/car4.jpg" class="watch" name="bike">
+            <img src="images/watch1.jpg" class="watch" name="bike">
+            <img src="images/watch2.jpg" class="watch" name="bike">
+            <img src="images/watch3.jpg" class="watch" name="bike">
+            <img src="images/watch4.jpg" class="watch" name="bike">
+            
+            
+        </div>
+    </body>
+    

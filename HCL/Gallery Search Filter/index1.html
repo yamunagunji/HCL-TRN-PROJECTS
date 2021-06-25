@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>Search images</title>
+
+<script type="text/javascript">
+var folder = "images/";
+
+$.ajax({
+    url : folder,
+    success: function (data) {
+        $(data).find("a").attr("href", function (i, val) {
+            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                $("body").append( "<img src='"+ folder + val +"'>" );
+            } 
+        });
+    }
+});
+</script>
+</head>
+<body>
+<form>
+<label>Search for image:</label>
+<br />
+<input type="text" name="search" placeholder="">
+<button type="submit">Search</button>
+<br />
+<!-- Image result should appear here -->
+</form>
+</body>
+</html>
